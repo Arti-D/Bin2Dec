@@ -1,17 +1,22 @@
 @import url("../vendor/normalize.css"); 
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
 
-
+body {
+    font-family: "Comfortaa", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
 .form {
     width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
-    border: 15px solid rgb(248, 252, 25);
+    border: 15px solid rgb(0, 0, 0);
     border-radius: 10px;
 }
 
 .form__header {
+    font-size: 28px;
     text-align: center;
     margin: 50px 0 0 0;
 }
@@ -20,10 +25,43 @@
 .form__container {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 25px;
+}
+
+.form__result {
+    margin-top: 0;
+    margin-bottom: 40px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 /* стилизация инпута */
+.form__input {
+    border: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
 
-
+.form__input:focus {
+    outline: none;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.7);
+}
 /* стилизация кнопки */
+
+.form__button {
+    background-color: white;
+    padding: 8px;
+    border-radius: 4px;
+
+}
+
+.form__button:hover {
+    cursor: pointer;
+    opacity: .7;
+    border-color: rgba(0, 0, 0, 0.7);
+}
+
+.form__button:disabled {
+    cursor: default;
+    opacity: .7;
+    border-color: rgba(0, 0, 0, 0.2)  
+}
