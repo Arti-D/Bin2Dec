@@ -21,7 +21,7 @@ form.addEventListener("submit", (e) => {
 //ВАЛИДАЦИЯ ИНПУТА
 function validateImput() {
     let valid = true
-    const pattern = /[2-9]/
+    const pattern = /[0-1]/g
     const input = binInput.value
     if (input.length === 0) {
         console.log("Введите число");

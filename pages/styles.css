@@ -1,18 +1,29 @@
 @import url("../vendor/normalize.css"); 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
 
+
 body {
+    height: 100vh;
     font-family: "Comfortaa", Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
+
+.main {
+    height: 100%;
+}
+
+
 .form {
     width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: auto;
+    margin: auto auto;
     border: 15px solid rgb(0, 0, 0);
     border-radius: 10px;
+    height: 60%;
+    max-height: 500px;
+    margin-top: 50px;
 }
 
 .form__header {
