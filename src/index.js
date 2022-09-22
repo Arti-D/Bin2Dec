@@ -1,15 +1,13 @@
 const button = document.querySelector(".form__button")
 const form = document.querySelector(".form__container")
 const binInput = document.querySelector(".form__input")
-
-
+const message = document.querySelector(".form__message")
+const resultValue = document.querySelector(".form__result")
 
 //РАБОТА КНОПКИ 
 function handleButton() {
     const bin = binInput.value
-    const resultValue = document.querySelector(".form__result")
     resultValue.textContent = parseInt(bin, 2)
-    console.log('click');
 }
 
 button.addEventListener("click", handleButton)
@@ -21,18 +19,20 @@ form.addEventListener("submit", (e) => {
 //ВАЛИДАЦИЯ ИНПУТА
 function validateImput() {
     let valid = true
-    const pattern = /[0-1]/g
+    resultValue.textContent = "результат"
+    const pattern = /[^0-1]/g
     const input = binInput.value
     if (input.length === 0) {
-        console.log("Введите число");
+        message.textContent = "введите число"
         valid = false
     } else if (pattern.test(input)) {
         valid = false
-        console.log("двоичный код должен быть чел");
+        message.textContent = "введите число в двоичной системе"
     }
     if (!valid) {
         button.setAttribute("disabled", true)
     } else {
+        message.textContent = ""
         button.removeAttribute("disabled")
     }
     

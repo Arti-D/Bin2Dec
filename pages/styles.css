@@ -49,7 +49,7 @@ body {
 .form__input {
     border: none;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 25px;
+    
 }
 
 .form__input:focus {
@@ -75,4 +75,35 @@ body {
     cursor: default;
     opacity: .7;
     border-color: rgba(0, 0, 0, 0.2)  
+}
+
+
+/* стили для названий полей*/
+.form__info:nth-child(2n){
+    margin-top: 40px;
+}
+
+/* стили сообщения ошибки */
+.form__message {
+    margin: 0;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* адаптив */
+@media screen and (max-width: 520px) {
+    .form__button {
+        font-size: 13px;
+    }
+    .form__container {
+        padding: 10px;
+    }
+    .form__header {
+        font-size: 20px;
+    }
+    .form {
+        width: 80%;
+        border-width: 7px;
+    }
 }
